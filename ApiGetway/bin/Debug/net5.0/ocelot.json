@@ -1,0 +1,30 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/auth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 11204
+        }
+      ],
+      "key": "userKey",
+      "UpstreamPathTemplate": "/auth",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/airline",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 17234
+        }
+      ],
+      "key": "airlineKey",
+      "UpstreamPathTemplate": "/airline",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    }
+  ]
+}
